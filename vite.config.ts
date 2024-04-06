@@ -3,5 +3,8 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	base: "/lettuce-magician.github.io/",
-	plugins: [sveltekit()]
+	plugins: [sveltekit()],
+	build: {
+		outDir: "./dist"
+	}
 });
