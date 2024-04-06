@@ -6,7 +6,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"deploy": "npx gh-pages -d out",
+		"deploy": "npx gh-pages -d out -t true",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
