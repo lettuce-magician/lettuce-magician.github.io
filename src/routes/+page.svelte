@@ -4,6 +4,10 @@
     
 </script>
 
+<svelte:head>
+    <title>Letiul's homepage</title>
+</svelte:head>
+
 <div
     class="w-full h-full flex flex-col items-center align-center content-center justify-center text-white"
 >
