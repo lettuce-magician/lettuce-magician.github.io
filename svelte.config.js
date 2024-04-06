@@ -1,16 +1,16 @@
 
 /**
  * import adapter from '@sveltejs/adapter-auto';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   kit: {
     adapter: adapter()
   },
-  preprocess: vitePreprocess()
+  
 };
 export default config;
- */
+*/
 
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import adapter from "@sveltejs/adapter-static"; 
 // was "@sveltejs/adapter-auto"
 
@@ -27,7 +27,8 @@ const config = {
             // change below to your repo name
             base: dev ? "" : "/lettuce-magician.github.io",
         }
-    }
+    },
+    preprocess: vitePreprocess()
 };
 
 export default config;
