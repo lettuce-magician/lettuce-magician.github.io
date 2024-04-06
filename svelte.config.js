@@ -20,15 +20,13 @@ const dev = "production" === "development";
 const config = {
     kit: {
         adapter: adapter({
-            pages: "docs",
-            assets: "docs"
+            pages: "out",
+            assets: "out"
         }),
         paths: {
             // change below to your repo name
-            base: dev ? "" : "/lettuce-magician.github.io/",
-        },
-        // hydrate the <div id="svelte"> element in src/app.html
-        target: "#svelte"
+            base: dev ? "" : "/lettuce-magician.github.io",
+        }
     }
 };
 
