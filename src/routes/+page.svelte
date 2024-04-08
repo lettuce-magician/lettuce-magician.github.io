@@ -32,14 +32,14 @@
             {$_("page.middleText.footer")}
         </p>
     </div>
-    <br/><br/>
+    <div class="p-6"/>
     <div class="grid items-center grid-cols-2 grid-rows-2 gap-4">
         <Button>{$_("page.buttons.about")}</Button>
         <Button>{$_("page.buttons.port")}</Button>
         <Button>{$_("page.buttons.blog")}</Button>
         <Button>{$_("page.buttons.misc")}</Button>
     </div>
-    <br/>
+    <div class="p-3"/>
 
     <div class="grid items-center justify-center align-center flex-col grid-cols-4 gap-2">
         <Social
@@ -59,7 +59,7 @@
             path={siSteam.path}
         />
     </div>
-    <br/>
+    <div class="p-2"/>
     <p class="text-[10px] font-nunito">{$_("page.wip")}</p>
 </div>
 {/await}
