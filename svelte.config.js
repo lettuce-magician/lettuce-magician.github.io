@@ -21,7 +21,8 @@ const config = {
     kit: {
         adapter: adapter({
             pages: "out",
-            assets: "out"
+            assets: "out",
+            fallback: "404.html"
         }),
         paths: {
             // change below to your repo name
