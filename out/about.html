@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./idiot.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/app.Ci79vA3W.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.B0y-B0ao.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.qctyXp0T.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.B33x0qpg.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.CvwNY6yd.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.Du7al7W0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.D6kgxu3v.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.C0J_O3Yj.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.B_IeiAwl.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.B_IeiAwl.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.DZ25hBR2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/coolbg.D559e7ul.js">
+	</head>
+	<body data-sveltekit-preload-data="hover" class="w-full h-full bg-gradient-to-t from-[rgb(25,25,25)] to-[rgb(15,15,15)] text-white">
+		<div id="svelte" class="contents">
+			  <main><canvas id="bg-canvas" class="top-0 absolute w-[100%] h-[100%] -z-10"></canvas></main> 
+			
+			<script>
+				{
+					__sveltekit_xsshtd = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.B0y-B0ao.js"),
+						import("./_app/immutable/entry/app.Du7al7W0.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+		</div>
+	</body>
+</html>

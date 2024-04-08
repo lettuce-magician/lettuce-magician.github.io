@@ -1,5 +1,8 @@
 @import '@fontsource-variable/pixelify-sans';
 @import '@fontsource/material-icons';
+@import '@fontsource/nunito';
+@import '@fontsource/plus-jakarta-sans';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

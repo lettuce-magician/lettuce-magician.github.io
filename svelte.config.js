@@ -14,7 +14,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import adapter from "@sveltejs/adapter-static"; 
 // was "@sveltejs/adapter-auto"
 
-const dev = "production" === "development";
+const dev = true;
 
 /** @type {import(""@sveltejs/kit").Config} */
 const config = {

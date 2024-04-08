@@ -4,9 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        pixelify: ['"Pixelify Sans Variable"', 'pixelify-sans']
+        pixelify: ['"Pixelify Sans Variable"', 'pixelify-sans'],
+        jarkata: ['"Plus Jakarta Sans"', "plus-jakarta-sans"],
+        nunito: ['"Nunito"', "nunito"],
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animated')]
 };
