@@ -22,7 +22,6 @@ const config = {
         adapter: adapter({
             pages: "out",
             assets: "out",
-            fallback: "404.html"
         }),
         paths: {
             // change below to your repo name
