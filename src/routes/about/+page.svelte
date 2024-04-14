@@ -1,23 +1,30 @@
 <script lang="ts">
-    import CoolBG from "$lib/coolbg.svelte";
+  import clsx from "clsx";
+  import { locale } from "$lib/data"
+  import ContentEn from "./en.md.svx";
+  import ContentPt from "./pt-br.md.svx";
+  let windowHeight: number;
+  let contentHeight: number;
 </script>
 
-<CoolBG />
-<!-- {if tamanho for maior q tal} {
-    aplica essa porra
-}
-se nao {
-    aplica essa outra porra
-} -->
-<!-- <div class="overflow-auto w-full h-full m-auto">
-    <div class="center w-full"> -->
-<!-- <div class="w-4/5 h-[300px] m-auto  rounded-[20px] bg-[rgb(30,30,30)] p-4">
-            <h1>oi</h1>
-        </div> -->
-<!-- </div>
-</div> -->
-
-<div class="w-[205pc] block h-[3006px] rounded-[20px] bg-[rgb(30,30,30)] p-6 m-auto">
-    <h1>oi</h1>
+<svelte:window bind:innerHeight={windowHeight} />
+<div class="size-full overflow-auto p-24 grid place-items-center">
+  <div
+    class={clsx(
+      "w-full flex justify-center",
+      contentHeight < windowHeight ? "items-center h-full" : ""
+    )}
+  >
+    <div
+      class="p-4 bg-gray-800 rounded-xl w-3/4 "
+      
+    >
+      {#if $locale == "en"}
+        <ContentEn />
+      {/if}
+      {#if $locale == "pt-br"}
+        <ContentPt />
+      {/if}
+    </div>
+  </div>
 </div>
-
