@@ -6,4 +6,4 @@
     export let flag = "us";
 </script>
 
-<button class="fi fi-{flag}" on:click={()=>locale.set(lang)}/>
+<button class="fi fi-{flag} hover:scale-125 transform transition duration-125 cursor-pointer" on:click={()=>locale.set(lang)}/>

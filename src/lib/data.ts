@@ -18,4 +18,4 @@ function storable(key:string,init:any) {
     return s;
 }
 
-export const locale = storable("locale", getLocaleFromNavigator())
+export const locale = storable("locale", getLocaleFromNavigator());

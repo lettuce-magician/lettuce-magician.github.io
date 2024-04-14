@@ -21,6 +21,7 @@
     
     "error": {
         "message": "erm, mas que diabos!",
-        "back": "Voltar"
+        "back": "Voltar",
+        "text": "Página Não Encontrada"
     }
 }

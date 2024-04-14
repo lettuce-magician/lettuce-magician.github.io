@@ -1,5 +1,3 @@
-<script lang="ts">
-    import {redirect} from "@sveltejs/kit"
-
-    redirect(307,"/not-found")
-</script>
+<svelte:head>
+    <meta http-equiv="refresh" content="0; URL=/not-found"/>
+</svelte:head>

@@ -1,12 +1,11 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    export let dy:number = 5
-    export let max_blocks:number = 30;
+    export let min_v = 0.75;
+    export let max_v = 2.5;
+    export let max_blocks: number = 35;
 
     const blocks: Block[] = [];
-    const waitTime = 500;
-    let lastTime = +new Date();
 
     let canvas: HTMLCanvasElement;
 
@@ -20,28 +19,29 @@
         w: number;
         h: number;
         a: number;
+        v: number;
 
-        win_height: number;
-        win_width: number;
-
-        constructor(width: number, height: number) {
-            this.x = rng(0, width);
-            this.y = height+50;
+        constructor() {
+            this.x = rng(0, canvas?.width);
+            this.v = rng(min_v, max_v);
+            this.y = rng(0, canvas?.height);
             this.w = 10;
             this.h = 75;
-            this.a = rng(1,10)/10;
-
-            this.win_height = height;
-            this.win_width = width;
+            this.a = rng(1, 10) / 10;
         }
 
         update() {
-            if (this.y > 0 - this.h) {
-                this.y -= dy;
+            // tem uma singular barra q consegue sair
+            // ve agr
+            // acho q os x tão dando overlap
+
+            if (this.y > 0 - this.h ) {
+                this.y -= this.v;
             } else {
-                this.y = this.win_height+50;
-                this.x = rng(0, this.win_width)
-                this.a = rng(1,10)/10
+                this.y = canvas?.height + 50;
+                this.x = rng(0, canvas?.width);
+                this.a = rng(1, 10) / 10;
+                this.v = rng(min_v, max_v);
             }
         }
 
@@ -52,37 +52,35 @@
     }
 
     function resizeCanvasToDisplaySize() {
-        const width = canvas?.clientWidth;
-        const height = canvas?.clientHeight;
-        if (canvas?.width !== width || canvas?.height !== height) {
-            canvas.width = width;
-            canvas.height = height;
+        if (
+            canvas?.width !== canvas?.clientWidth ||
+            canvas?.height !== canvas?.clientHeight
+        ) {
+            canvas.width = canvas?.clientWidth;
+            canvas.height = canvas?.clientHeight;
         }
     }
 
     onMount(() => {
         const ctx = canvas?.getContext("2d") as CanvasRenderingContext2D;
 
+        resizeCanvasToDisplaySize();
+
+        for (let i = 0; i < max_blocks; i++) {
+            blocks.push(new Block());
+        }
+
         function animate(time: number) {
             requestAnimationFrame(animate);
             resizeCanvasToDisplaySize();
 
-            const width = canvas?.width;
-            const height = canvas?.height;
-
-            ctx.clearRect(0, 0, width, height);
-
-            if (+new Date() > lastTime + waitTime && blocks.length < max_blocks) {
-                lastTime = +new Date();
-                blocks.push(new Block(width, height));
-            }
+            ctx.clearRect(0, 0, canvas?.width, canvas?.height);
 
             blocks.forEach(function (e) {
                 e.update();
                 e.draw(ctx);
             });
         }
-        
 
         requestAnimationFrame(animate);
     });
@@ -92,6 +90,6 @@
     <canvas
         bind:this={canvas}
         id="bg-canvas"
-        class="top-0 absolute w-[100%] h-[100%] -z-10"
+        class="top-0 fixed size-full -z-10 bg-gradient-to-t from-[rgb(25,25,25)] to-[rgb(15,15,15)]"
     ></canvas>
 </main>

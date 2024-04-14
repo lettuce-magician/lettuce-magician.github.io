@@ -19,6 +19,7 @@
     },
     "error": {
         "message": "erm, what the flip!",
-        "back": "Go back"
+        "back": "Go back",
+        "text": "Not Found"
     }
 }

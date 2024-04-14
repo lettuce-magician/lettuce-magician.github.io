@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-<title>404 not found</title>
+<title>404</title>
 </svelte:head>
 
 <CoolBG/>
@@ -20,7 +20,7 @@ class="w-full h-full flex flex-col items-center align-center content-center just
     <img class="w-[150px] h-[150px]" src="whar.png" alt="letiul, confused."/>
     <p class="text-2xl font-pixelify">{$_("error.message")}</p>
     <h1 class="text-blue-500 text-5xl font-pixelify font-bold">404</h1>
-    <p class="text-2xl font-pixelify text-blue-500">Page not found</p>
+    <p class="text-2xl font-pixelify text-blue-500">{$_("error.text")}</p>
 </div>
 <!-- faz uma quebra de linha sem usar br -->
 <div class="m-4"/>
