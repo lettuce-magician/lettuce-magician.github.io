@@ -1,0 +1,12 @@
+---
+title: teste
+layout: about
+---
+# Ola como vai
+isso é um texto teste para ver como o markdown esta
+
+```js
+import {useless_function} from 'my-package'
+
+useless_function()
+```
