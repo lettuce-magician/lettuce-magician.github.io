@@ -1,0 +1,12 @@
+---
+title: test
+layout: about
+---
+# Hi how are you?
+this is a test text to see how the markdown is
+
+```rust
+fn d() {
+    println!("ola");
+}
+```

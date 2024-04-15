@@ -1,4 +1,4 @@
-import { register, init, waitLocale, _, locale as i18n_locale} from 'svelte-i18n';
+import { register, init, waitLocale, _, locale as i18n_locale } from 'svelte-i18n';
 import { locale } from './data';
 import { get } from 'svelte/store';
 
