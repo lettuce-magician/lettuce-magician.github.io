@@ -2,11 +2,59 @@
 title: teste
 layout: about
 ---
+
 # Ola como vai
+
 isso é um texto teste para ver como o markdown esta
 
-```js
-import {useless_function} from 'my-package'
+```js title="fasdgfasdg.js" allowCopy
+import { useless_function } from "my-package";
 
-useless_function()
+useless_function();
+```
+
+## Autolink literals
+
+www.example.com, https://example.com, and contact@example.com.
+
+## Footnote
+
+A note[^1]
+
+[^1]: Big note.
+
+## Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+## Table
+
+| a     | b           |   c |  d  |
+| ----- | :---------- | --: | :-: |
+| Hello | How are you |     |     |
+
+## Tasklist
+
+- [ ] to do
+- [x] done
+
+## Here we have an example of a potato:
+<img src="/idiot.png"/>
+
+```lua tabs ? allowCopy name="this.lua"
+function add(...)
+    for _,v in pairs{...} do 
+        print(v)
+    end
+end
+```
+```js tabs allowCopy name="this.js"
+// testes pkodfça
+``` 
+
+teste
+
+```js
+// how are you?
+console.log('yes')
 ```

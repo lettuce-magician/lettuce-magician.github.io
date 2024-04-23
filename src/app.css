@@ -26,3 +26,18 @@ code {
   counter-reset: step;
   counter-increment: step 0;
 }
+div[data-remark-code-title=true] {
+  background-color: black;
+  padding : .51em;
+  font-size: 1.1rem;
+  display: flex;
+}
+.copy_button {
+  margin-left: auto;
+  margin-right: 1em;
+  transition: all .2s;
+}
+.copy_button:hover {
+  color:rgb(100,41,240);
+  cursor: pointer;
+}

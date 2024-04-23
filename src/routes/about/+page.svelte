@@ -15,8 +15,8 @@
       contentHeight < windowHeight ? "items-center h-full" : ""
     )}
   >
-    <div class="p-4 bg-gray-800 rounded-xl w-3/4">
-      {#if ($locale??"").toLowerCase() == "en"}
+    <div class="p-4 bg-slate-700 rounded-xl w-3/4">
+      {#if ($locale??"en").toLowerCase() == "en" || (!["en", "pt-br"].includes(($locale)?.toLowerCase()||"en"))}
         <ContentEn />
       {/if}
       {#if ($locale??"").toLowerCase() == "pt-br"}
