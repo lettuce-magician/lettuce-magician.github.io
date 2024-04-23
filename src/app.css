@@ -2,6 +2,10 @@
 @import "@fontsource/material-icons";
 @import "@fontsource/nunito";
 @import "@fontsource/plus-jakarta-sans";
+@import "@fontsource-variable/pixelify-sans";
+@import "@fontsource/material-icons";
+@import "@fontsource/nunito";
+@import "@fontsource/plus-jakarta-sans";
 
 @tailwind base;
 @tailwind components;
@@ -11,18 +15,6 @@
     .center {
         @apply flex items-center justify-center ;
     }
-}
-
-@layer utilities {
-    .center {
-        @apply flex items-center justify-center ;
-    }
-}
-
-@layer utilities {
-  .center {
-    @apply flex items-center justify-center;
-  }
 }
 
 html,
