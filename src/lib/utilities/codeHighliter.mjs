@@ -1,5 +1,6 @@
 import { codeToHtml, getHighlighter } from "shiki";
 import { parse } from 'node-html-parser'
+import { transformerMetaHighlight } from '@shikijs/transformers'
 
 const THEME = "github-dark";
 

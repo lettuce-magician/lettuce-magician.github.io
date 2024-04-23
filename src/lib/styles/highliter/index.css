@@ -66,6 +66,9 @@ code {
     -20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
+code .line{
+  margin-left:6px;
+}
 code .line::before {
   display: inline-block;
   content: counter(step);
